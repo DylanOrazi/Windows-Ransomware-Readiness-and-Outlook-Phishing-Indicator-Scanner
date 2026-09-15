@@ -1,0 +1,34 @@
+SAFE TESTING NOTES
+==================
+
+This project uses a safe test data first.
+
+The scanner will not use real ransomware, malware, or malicious scripts. Any suspicious-looking files used in this project are harmless sample files created only to test filename and extension detection.
+
+Examples of safe test files may include: 
+
+- sample.locked
+- invoice.encrypted
+- README_RESTORE_FILES.txt
+- DECRYPT_INSTRUCTIONS.txt 
+
+These files are not encrypted and do not contain malware. They are only used so the scanner can identify ransomware-style filenames and extensions.
+
+The email phishing scanner module will begin with fake sample email data. The sample data may include suspicious-looking subjects, attachment names, links, and header, but they are only text  examples. 
+
+The Outlook Desktop mailbox scan module, if used, will be read-only. 
+
+The scanner will NOT:  
+
+- Open attachments 
+- Click links 
+- Download files
+- Delete messages 
+- Move messages
+- Reply to messages 
+- Forward messages 
+- Modify mailbox contents 
+
+The scanner will only inspect message properties such as sender, subject, received date, attachment names, link text, and available header information. 
+
+This project should be performed on a personal laptop or personal lab environment. Work mailbox scanning should only be performed with proper approval. 

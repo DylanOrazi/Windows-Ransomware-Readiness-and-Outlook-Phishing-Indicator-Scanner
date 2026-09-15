@@ -1,0 +1,97 @@
+PLANNED SCANNED FEATURES
+========================
+
+The ransomware readiness and Outlook phishing indicator scanner will include the following planned modules. 
+
+1. System Information Module 
+
+Collects basic endpoint details such as computer name, Windows version, current use, PowerShell version, and scan timestamp.
+
+2. Endpoint Protection Module
+
+Checks local endpoint protection indicators, including Microsoft Defender status and optional Sophos detection. 
+
+3. Windows Defender and Ransomware Protection Module 
+
+Checks Defender status, real-time protection, cloud-delivered protection, Controlled Folder Access status, and related ransomware-readiness settings where available. 
+
+4. Firewall and Network Protection Module 
+
+Checks Windows Firewall profile status for Domain, Private, and Public profiles.
+
+5. Windows Update and Patch Readiness Module 
+
+Checks Windows Update-related service status and basic patch readiness indicators. 
+
+6. Suspicious File Indicator Module 
+
+Scans safe test folders for ransomware-style file indicators, such as suspicious extensions and ransom-note filenames. 
+
+7. Outlook and Email Phishing Indicator Analysis Module 
+
+Scans Outlook-style mailbox data, CSV email exports, and optional local Outlook Desktop mailbox items for phishing indicators. 
+
+The module checks for suspicious senders, risky attachments, embedded link, urgent language, credential-related keywords, invoice/payment/payroll themes, and ransomware delivery indicators.
+
+8. Suspicious Link Analysis Module 
+
+Extracts links as plain text and checks for suspicious indicators such as HTTP links, shortened URLs, IP-address links, long URLs, encoded characters, multiple links, and suspicious login or payment-related keywords.
+
+The scanner does not click or visit links. 
+
+9. Email Header Indicator Module 
+
+Reviews available email header fields, where possible, for indicators such as Reply-To mismatch, Return-Path mismatch, and authentication results including SPF, DKIM or DMARC.
+
+10. Startup and Persistence Review Module 
+
+Reviews common startup and persistence locations, including Startup folders, Run registry keys, and scheduled tasks.
+
+11. Backup and Recovery Readiness Module 
+
+Checks recovery-readiness indicators such as OneDrive folder presence, File History-related services, restore point indicators, or backup folders.
+
+12. User Account Security Module 
+
+Reviews basic local account security indicators, including current user privilege and Guest account status where available.
+
+13. Risk Scoring Module 
+
+Assigns weighted risk points based on findings and calculates an overall ransomware/phishing readiness risk level. 
+
+14. Report Generation Module 
+
+Exports a TXT readiness report, CSV findings file, and scanner run log. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

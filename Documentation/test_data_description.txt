@@ -1,0 +1,27 @@
+TEST DATA DESCRIPTION
+=====================
+
+This project uses safe test data to validate the ransomware readiness and Outlook phishing indicator scanner.
+
+The Test_Files folder contains harmless files with normal and suspicious looking names. These files are used only to test whether the scanner can identify ransomware-style indicators based on filenames and extensions.
+
+Normal test files include:
+
+- normal_document.txt
+- budget_notes.txt
+- family_photo.jpg
+
+Suspicious ransomware-style test files include:
+
+- invoice.encrypted
+- sample.locked
+- client_files.crypt
+- README_RESTORE_FILES.txt
+- DECRYPT_INSTRUCTIONS.txt
+- HOW_TO_RECOVER_FILES.txt
+
+These files do NOT contain malware, ransomware, encryption logic, scripts, or destructive content. They are safe placeholder files used for detection testing only.
+
+The Test_Data folder contains fake Outlook-style email records. These records are not real emails and do not come from any real mailbox. The email sample data is used to test phishing indicator detection, such as suspicious senders, risky attachments, HTTP links, urgent language, and password or invoice-related wording.
+
+The project does not open attachments, click links, download files, or interact with real email accounts during the safe test data phase. 
