@@ -137,7 +137,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 ./ransomware_phishing_scanner.ps1
 
-Then click enter to run.
+Then click enter to run.```
 
 ---
 
