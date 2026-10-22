@@ -139,3 +139,41 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 Then click enter to run.
 
+---
+
+## Known Limitation:
+
+On some systems, the Outlook module may display:
+
+0x80040154 - Class not registered
+
+This indicates that a required COM component could not be initialized. The issue may occur even when Classic Outlook is installed and running.
+
+During compatibility testing, direct PowerShell access to Outlook and the Inbox worked successfully, but the scanner's Outlook module still encountered this error. The underlying cause has not yet been identified.
+
+If this occurs, users can skip the optional Outlook module and continue using the other scanner features.
+
+---
+
+## Scheduled Task Inspection
+
+The startup and persistence review may occasionally display:
+
+Scheduled task review could not be completed.
+
+This may occur due to system permissions, configuration differences, or execution errors.
+
+Other startup and registry inspection features may continue functioning normally.
+
+---
+
+## General Notes
+
+The scanner is intended for cybersecurity education, security awareness, and system readiness assessments.
+
+Detected indicators do not necessarily confirm malicious activity.
+
+The application does not automatically remove threats or modify suspicious emails.
+
+Results may vary depending on Windows configuration, permissions, and installed software.
+
