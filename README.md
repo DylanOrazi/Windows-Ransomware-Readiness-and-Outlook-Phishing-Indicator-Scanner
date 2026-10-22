@@ -138,3 +138,57 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ./ransomware_phishing_scanner.ps1
 
 Then click enter to run.
+
+### PowerShell Compatibility
+
+- Supports Windows 10 and Windows 11.
+- Designed for Windows PowerShell 5.1.
+- Some system checks may require administrator privileges.
+- Run the scanner only on systems you own or are authorized to inspect.
+
+### Outlook Desktop Mailbox Scanning
+
+The optional Outlook Desktop module scans recent Inbox messages in read-only mode using Microsoft Outlook COM automation.
+
+**Requirements:**
+
+- Classic Microsoft Outlook must be installed and configured.
+- An accessible Outlook mailbox is required.
+- Windows PowerShell 5.1 is recommended for Outlook COM integration.
+
+### Why New Outlook Is Not Supported
+
+Classic Outlook supports COM automation, allowing PowerShell to access mailbox information through the Outlook Object Model.
+
+New Outlook for Windows does not support this legacy COM interface. As a result, direct mailbox scanning currently requires Classic Outlook.
+
+Support for New Outlook could be explored in the future using Microsoft Graph API with appropriate authentication and permissions.
+
+The CSV-based phishing indicator scanner works independently of the installed Outlook version.
+
+### Known Outlook Compatibility Issue
+
+On some systems, the Outlook mailbox module may display:
+
+`0x80040154 - Class not registered`
+
+This indicates that a required COM component could not be initialized.
+
+During compatibility testing, direct PowerShell access to Outlook and the Inbox succeeded, but the scanner's Outlook module still encountered this error. The root cause has not yet been determined.
+
+Users can skip the optional Outlook module and continue with the other scanning features.
+
+### Scheduled Task Inspection
+
+The startup and persistence module may display:
+
+`Scheduled task review could not be completed.`
+
+Possible causes include permission restrictions, system configuration differences, or execution errors. Other startup and registry checks may still complete successfully.
+
+### General Notes
+
+- This project is intended for defensive cybersecurity education and security readiness assessments.
+- Detected indicators do not automatically confirm malicious activity.
+- The scanner does not automatically remove threats or modify suspicious emails.
+- Results may vary depending on Windows configuration, permissions, and installed software.
