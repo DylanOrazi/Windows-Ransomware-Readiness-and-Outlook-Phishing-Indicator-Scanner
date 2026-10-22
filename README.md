@@ -132,12 +132,21 @@ Optional:
 3. Open PowerShell in that folder by typing in `PowerShell` in the address bar.
 4. If script execution is blocked, temporarily allow scripts for the current session:
 
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+4. If script execution is blocked, temporarily allow scripts for the current session only if you trust the downloaded code:
 
-./ransomware_phishing_scanner.ps1
+   ```powershell
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+   ```
 
-Then click enter to run.
+5. Run the scanner:
+
+   ```powershell
+   .\ransomware_phishing_scanner.ps1
+   ```
+
+6. Press Enter to launch the scanner.
+
+---
 
 ### PowerShell Compatibility
 
